@@ -29,4 +29,4 @@ app.listen(port, () => {
     console.log("Server is running on " + port + "port");
 });
 
-app.use('/test', require('./routes/routes.js'))
+app.use('/temper', require('./routes/routes.js'))
