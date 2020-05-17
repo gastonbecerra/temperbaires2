@@ -4,6 +4,7 @@ const port = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+/*
 const db = require('./config/keys').mongoURI;
 var mongoose = require('mongoose');
 mongoose
@@ -16,6 +17,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true)
+*/
 
 app.use(bodyParser.json());
 app.use(
