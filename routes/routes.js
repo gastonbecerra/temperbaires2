@@ -1,11 +1,10 @@
 const express = require('express')
 const router = express.Router()
-
 const axios = require('axios').default;
 const request = require('request');
 
 //Importe instancia/modelo de conexión a la base de datos
-/* const temperModel = require('../model/temper') */
+const temperModel = require('../model/temper')
 
 //Probando ruta de lectura de datos
 router.get('/test', (req, res) => {
@@ -29,7 +28,6 @@ router.get('/test', (req, res) => {
                 db.humidity = bs.humidity
                 db.st = bs.st == null ? 'null' : bs.st
                 
-                /*
                 //Se manda la información a la Base de datos
                 temperModel.findByIdAndUpdate('5ebff453ce26a9d5abcc0006', { //se actualiza el único registo en la base de datos (el arg es el ID)
                     $set: db                                                //se pasan todos los datos previamente separados
@@ -47,11 +45,10 @@ router.get('/test', (req, res) => {
                 //     res.send(file)
                 // })
                 // res.send(db)
-                */
 
             }
         }
-       res.json(data);
+       // res.json(data);
     }
     });
 })
